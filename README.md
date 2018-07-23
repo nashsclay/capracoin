@@ -1,0 +1,2 @@
+# capracoin
+Masternode Install Script
