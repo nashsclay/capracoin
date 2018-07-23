@@ -1,17 +1,17 @@
 #!/bin/bash
 
 TMP_FOLDER=$(mktemp -d)
-CONFIG_FILE='poseidon.conf'
-CONFIGFOLDER='/root/.poseidon'
-COIN_DAEMON='poseidond'
-COIN_CLI='poseidon-cli'
-COIN_TX='poseidon-tx'
+CONFIG_FILE='capracoin.conf'
+CONFIGFOLDER='/root/.capracoin'
+COIN_DAEMON='capracoind'
+COIN_CLI='capracoin-cli'
+COIN_TX='capracoin-tx'
 COIN_PATH='/usr/local/bin/'
 COIN_TGZ='https://github.com/nashsclay/POSQ/releases/download/v2.0/posq_mn_files.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
-COIN_NAME='poseidonquark'
-COIN_PORT=5510
-RPC_PORT=5511
+COIN_NAME='capracoin'
+COIN_PORT=25791
+RPC_PORT=25792
 
 NODEIP=$(curl -s4 icanhazip.com)
 
@@ -119,34 +119,6 @@ maxconnections=256
 masternode=1
 externalip=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
-addnode=192.243.103.201:5510
-addnode=192.243.103.202:5510
-addnode=80.111.218.44:5510
-addnode=192.243.101.179:5510
-addnode=192.243.100.6:5510
-addnode=192.243.100.65:5510
-addnode=192.243.102.48:5510
-addnode=165.227.226.176:5510
-addnode=159.89.19.161:5510
-addnode=185.248.140.13:5510
-addnode=84.200.24.120:5510
-addnode=37.228.224.37:5510
-addnode=91.39.113.78:5510
-addnode=196.52.39.22:5510
-addnode=140.82.61.65:5510
-addnode=91.39.113.78:5510
-addnode=63.140.89.8:5510
-addnode=203.220.144.229:5510
-addnode=216.117.128.40:5510
-addnode=18.222.88.154:5510
-addnode=173.30.75.11:5510
-addnode=110.232.112.81:5510
-addnode=85.15.190.106:5510
-addnode=82.142.153.162:5510
-addnode=45.77.148.21:5510
-addnode=173.239.218.20:5510
-addnode=159.65.20.209:5510
-addnode=172.245.185.184:5510
 EOF
 }
 
